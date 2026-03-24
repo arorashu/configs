@@ -1,0 +1,45 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+
+--manually added
+-- local function toggle_cmp()
+--   local cmp = require("cmp")
+--   if vim.g.cmp_enabled then
+--     vim.g.cmp_enabled = false
+--     cmp.setup.buffer({ enabled = false })
+--   else
+--     vim.g.cmp_enabled = true
+--     cmp.setup.buffer({ enabled = true })
+--   end
+-- end
+--
+-- vim.keymap.set("n", "<leader>uu", toggle_cmp, { desc = "Toggle auto-completion" })
+
+-- local function toggle_cmp()
+--   local cmp = require("cmp")
+--   local notify = require("notify") -- for notifications
+--
+--   -- Initialize the state if it's nil
+--   if vim.g.cmp_enabled == nil then
+--     -- Check current cmp state by trying to get completion
+--     local ok = pcall(function()
+--       return cmp.visible()
+--     end)
+--     vim.g.cmp_enabled = ok
+--   end
+--
+--   -- Toggle the state
+--   vim.g.cmp_enabled = not vim.g.cmp_enabled
+--
+--   -- Apply the state and show notification
+--   if vim.g.cmp_enabled then
+--     cmp.setup.buffer({ enabled = true })
+--     notify("Auto-completion enabled", "info", { title = "Completion" })
+--   else
+--     cmp.setup.buffer({ enabled = false })
+--     notify("Auto-completion disabled", "info", { title = "Completion" })
+--   end
+-- end
+
+-- vim.keymap.set("n", "<leader>uu", toggle_cmp, { desc = "Toggle auto-completion" })
